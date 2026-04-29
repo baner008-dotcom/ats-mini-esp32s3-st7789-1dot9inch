@@ -316,9 +316,6 @@ ICACHE_RAM_ATTR void rotaryEncoder()
   uint8_t encoderStatus = encoder.process();
   if(encoderStatus)
   {
-    step++;
-  if(step % 2 == 0)
-       
     int8_t delta = encoderStatus==DIR_CW? 1 : -1;
     int16_t accelDelta = accelerateEncoder(delta);
 
