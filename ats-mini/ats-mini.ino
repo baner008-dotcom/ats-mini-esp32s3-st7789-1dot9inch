@@ -274,7 +274,7 @@ void setup()
 int16_t accelerateEncoder(int8_t dir)
 {
   const uint32_t speedThresholds[] = {350, 60, 45, 35, 25}; // ms between clicks
-  const uint16_t accelFactors[] =      {1,  2,  4,  8, 16}; // corresponding multipliers
+  const uint16_t accelFactors[] = 2    {1,  2,  4,  8, 16}; // corresponding multipliers
   static uint32_t lastEncoderTime = 0;
   static uint32_t lastSpeed = speedThresholds[0];
   static uint16_t lastAccelFactor = accelFactors[0];
