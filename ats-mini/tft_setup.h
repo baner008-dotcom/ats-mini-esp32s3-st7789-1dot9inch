@@ -16,13 +16,13 @@
 #define TFT_INVERSION_ON
 #define TFT_BACKLIGHT_ON HIGH
 
-// #define TFT_BL     15   // LED back-light
+// #define TFT_BL     15   // LED back-light GPIO 15
 #define TFT_MISO   -1   // Not connected
-#define TFT_MOSI   11
-#define TFT_SCLK   12
-#define TFT_CS     10
-#define TFT_DC     6
-#define TFT_RST    7 // Connect reset to ensure display initialises
+#define TFT_MOSI   11   // GPIO 11
+#define TFT_SCLK   12   // GPIO 12
+#define TFT_CS     10   // GPIO 10
+#define TFT_DC     6   // GPIO 6
+#define TFT_RST    7 // Connect reset to ensure display initialises GPIO 7
 
 #define SPI_FREQUENCY 40000000
 #define SPI_READ_FREQUENCY 20000000
