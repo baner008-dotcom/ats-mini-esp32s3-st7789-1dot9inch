@@ -8,7 +8,7 @@
 //#define HALF_STEP
 
 #if defined(LILYGO_SI473X)
-#define HALF_STEP
+//#define HALF_STEP
 #endif
 
 #define ENABLE_PULLUPS  // Enable weak pullups
