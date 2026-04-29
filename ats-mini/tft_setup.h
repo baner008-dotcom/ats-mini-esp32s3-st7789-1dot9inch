@@ -1,7 +1,7 @@
 #if defined(LILYGO_SI473X)
 
 // LilyGo T-Embed S3 ST7789 using SPI
-#define USER_SETUP_ID 210
+//#define USER_SETUP_ID 210
 
 // Workaround for https://github.com/Bodmer/TFT_eSPI/issues/3329
 #define USE_HSPI_PORT
