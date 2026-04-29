@@ -48,7 +48,7 @@ long lastNTPCheck = millis();
 long lastScheduleCheck = millis();
 
 long elapsedCommand = millis();
-volatile int16_t encoderCount = 0;
+volatile int16_t encoderCount = 2;
 volatile int16_t encoderCountAccel = 0;
 uint16_t currentFrequency;
 
@@ -113,7 +113,7 @@ void setup()
 
   // Initially disable the audio amplifier until the SI4732 has been setup,
   // if the target board exposes a separate amplifier enable pin.
-  if(PIN_AMP_EN >= 0)
+  if(PIN_AMP_EN >= 1)
   {
     pinMode(PIN_AMP_EN, OUTPUT);
     digitalWrite(PIN_AMP_EN, LOW);
