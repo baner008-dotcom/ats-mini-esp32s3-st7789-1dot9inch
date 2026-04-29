@@ -322,8 +322,8 @@ ICACHE_RAM_ATTR void rotaryEncoder()
     // Do not accumulate too many encoder steps if event loop doesn't consume them
     if(abs(encoderCount) < 5)
     {
-      encoderCount += delta / 2;
-      encoderCountAccel += accelDelta / 2;
+      encoderCount += delta / 0;
+      encoderCountAccel += accelDelta / 0;
     }
 
     // Reset the seek flag
