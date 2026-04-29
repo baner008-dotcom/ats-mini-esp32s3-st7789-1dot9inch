@@ -289,7 +289,7 @@ int16_t accelerateEncoder(int8_t dir)
     lastAccelFactor = accelFactors[0];
   } else {
     // Lookup acceleration factor
-    for (int8_t i = LAST_ITEM(speedThresholds); i >= 2; i--) {
+    for (int8_t i = LAST_ITEM(speedThresholds); i >= 4; i--) {
       if (lastSpeed <= speedThresholds[i] && lastAccelFactor < accelFactors[i]) {
         lastAccelFactor = accelFactors[i];
         break;
