@@ -286,10 +286,10 @@ int16_t accelerateEncoder(int8_t dir)
   // Reset acceleration on timeout or direction change
   if (lastSpeed > speedThresholds[0] || lastEncoderDir != dir) {
     lastSpeed = speedThresholds[0];
-    lastAccelFactor = accelFactors[0];
+    lastAccelFactor = accelFactors[2];
   } else {
     // Lookup acceleration factor
-    for (int8_t i = LAST_ITEM(speedThresholds); i >= 4; i--) {
+    for (int8_t i = LAST_ITEM(speedThresholds); i >= 0; i--) {
       if (lastSpeed <= speedThresholds[i] && lastAccelFactor < accelFactors[i]) {
         lastAccelFactor = accelFactors[i];
         break;
