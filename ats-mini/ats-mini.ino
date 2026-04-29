@@ -316,14 +316,17 @@ ICACHE_RAM_ATTR void rotaryEncoder()
   uint8_t encoderStatus = encoder.process();
   if(encoderStatus)
   {
+    step++;
+  if(step % 2 == 0)
+  {     
     int8_t delta = encoderStatus==DIR_CW? 1 : -1;
     int16_t accelDelta = accelerateEncoder(delta);
 
     // Do not accumulate too many encoder steps if event loop doesn't consume them
     if(abs(encoderCount) < 5)
     {
-      encoderCount += delta;
-      encoderCountAccel += accelDelta;
+      encoderCount += delta / 2;
+      encoderCountAccel += accelDelta / 2;
     }
 
     // Reset the seek flag
@@ -337,7 +340,7 @@ uint32_t consumeEncoderCounts()
   noInterrupts();
   encCount = encoderCount;
   encCountAccel = encoderCountAccel;
-  encoderCount = 2;
+  encoderCount = 0;
   encoderCountAccel = 0;
   interrupts();
   return ((uint32_t)encCountAccel << 16) | ((uint16_t)encCount & 0xFFFF);
