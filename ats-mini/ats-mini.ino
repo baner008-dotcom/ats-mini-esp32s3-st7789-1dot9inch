@@ -286,7 +286,7 @@ int16_t accelerateEncoder(int8_t dir)
   // Reset acceleration on timeout or direction change
   if (lastSpeed > speedThresholds[0] || lastEncoderDir != dir) {
     lastSpeed = speedThresholds[0];
-    lastAccelFactor = accelFactors[2];
+    lastAccelFactor = accelFactors[0];
   } else {
     // Lookup acceleration factor
     for (int8_t i = LAST_ITEM(speedThresholds); i >= 0; i--) {
@@ -337,7 +337,7 @@ uint32_t consumeEncoderCounts()
   noInterrupts();
   encCount = encoderCount;
   encCountAccel = encoderCountAccel;
-  encoderCount = 0;
+  encoderCount = 2;
   encoderCountAccel = 0;
   interrupts();
   return ((uint32_t)encCountAccel << 16) | ((uint16_t)encCount & 0xFFFF);
