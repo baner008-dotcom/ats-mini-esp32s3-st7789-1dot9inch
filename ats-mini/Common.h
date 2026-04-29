@@ -46,7 +46,7 @@
 #define ESP32_I2C_SCL  8            // GPIO8    SI4732/5 Clock
 #define ESP32_I2C_SDA 18            // GPIO18   SI4732/5 Data
 #define AUDIO_MUTE    17            // GPIO17   Hardware L/R mute, controlled via SI4735 code (1 = Mute)
-#define PIN_AMP_EN    -1            // T-Embed shield has no separate amp enable pin
+#define PIN_AMP_EN    14            // T-Embed shield has no separate amp enable pin
 
 // Display PINs
 #define PIN_LCD_BL    15            // GPIO15   LCD backlight (PWM brightness control)
@@ -65,7 +65,7 @@
 #define ESP32_I2C_SCL 17            // GPIO17   SI4732/5 Clock
 #define ESP32_I2C_SDA 18            // GPIO18   SI4732/5 Data
 #define AUDIO_MUTE     3            // GPIO3    Hardware L/R mute, controlled via SI4735 code (1 = Mute)
-#define PIN_AMP_EN    10            // GPIO10   Hardware Audio Amplifer enable (1 = Enable)
+#define PIN_AMP_EN    14            // GPIO10   Hardware Audio Amplifer enable (1 = Enable)
 
 // Display PINs
 #define PIN_LCD_BL    38            // GPIO38   LCD backlight (PWM brightness control)
