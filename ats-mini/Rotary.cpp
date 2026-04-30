@@ -122,8 +122,8 @@ Rotary::Rotary(char _pin1, char _pin2) {
   pin1 = _pin1;
   pin2 = _pin2;
   // Set pins to input.
-  pinMode(pin1, INPUT);
-  pinMode(pin2, INPUT);
+  DDRD &= ~(1 << pin1);
+  DDRD &= ~(1 << pin2);
 #ifdef ENABLE_PULLUPS
   digitalWrite(pin1, HIGH);
   digitalWrite(pin2, HIGH);
@@ -134,7 +134,7 @@ Rotary::Rotary(char _pin1, char _pin2) {
 
 unsigned char Rotary::process() {
   // Grab state of input pins
-  unsigned char pinstate = (digitalRead(pin2) << 2) | digitalRead(pin1);
+  unsigned char pinstate = ((PIND & (1 << 3)) >> 2) | ((PIND & (1 << 2)) >> 2);
   // Determine new state from the pins and state table
   state = ttable[state & 0xf][pinstate];
   // Return emit bits, ie the generated event
