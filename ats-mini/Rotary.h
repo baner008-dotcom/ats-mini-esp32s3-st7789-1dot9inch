@@ -5,8 +5,11 @@
 #define rotary_h
 
 // Enable this to emit codes twice per step
+//#define HALF_STEP
+
+#if defined(LILYGO_SI473X)
 #define HALF_STEP
-//#define FULL_STEP
+#endif
 
 #define ENABLE_PULLUPS  // Enable weak pullups
 
