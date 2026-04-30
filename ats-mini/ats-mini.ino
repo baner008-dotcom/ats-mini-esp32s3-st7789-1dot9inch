@@ -113,7 +113,7 @@ void setup()
 
   // Initially disable the audio amplifier until the SI4732 has been setup,
   // if the target board exposes a separate amplifier enable pin.
-  if(PIN_AMP_EN >= 1)
+  if(PIN_AMP_EN >= 0)
   {
     pinMode(PIN_AMP_EN, OUTPUT);
     digitalWrite(PIN_AMP_EN, LOW);
