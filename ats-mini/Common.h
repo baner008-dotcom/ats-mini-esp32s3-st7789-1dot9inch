@@ -55,7 +55,7 @@
 // Rotary Enconder PINs
 #define ENCODER_PIN_A  2            // GPIO02
 #define ENCODER_PIN_B  1            // GPIO01
-#define ENCODER_PUSH_BUTTON 0       // GPIO0
+#define ENCODER_PUSH_BUTTON 5       // GPIO05
 
 #else
 
@@ -74,7 +74,7 @@
 // Rotary Enconder PINs
 #define ENCODER_PIN_A  2            // GPIO02
 #define ENCODER_PIN_B  1            // GPIO01
-#define ENCODER_PUSH_BUTTON 21      // GPIO21
+#define ENCODER_PUSH_BUTTON 5      // GPIO05
 
 #endif
 
