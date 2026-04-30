@@ -5,8 +5,8 @@
 #define rotary_h
 
 // Enable this to emit codes twice per step
-//#define HALF_STEP
-#define FULL_STEP
+#define HALF_STEP
+//#define FULL_STEP
 
 #define ENABLE_PULLUPS  // Enable weak pullups
 
